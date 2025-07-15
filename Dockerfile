@@ -1,19 +1,20 @@
-FROM node:lts-buster
+# Utilise une image Node.js stable
+FROM node:18
 
-# Clone the correct repository
-RUN git clone https://github.com/Itzpatron/PATRON-MD2.git /root/Patron
+# Dossier de travail dans le conteneur
+WORKDIR /app
 
-# Set working directory
-WORKDIR /root/Patron
-
-# Install dependencies
-RUN npm install && npm install -g pm2 || yarn install --network-concurrency 1
-
-# Copy your local files into the container
+# Copie des fichiers du projet dans le conteneur
 COPY . .
 
-# Expose the app port
-EXPOSE 9090
+# Installation des dépendances avec npm install (et non npm ci)
+RUN npm install
 
-# Start the app
-CMD ["npm", "start"]
+# Définition de la variable d’environnement PORT (optionnelle ici)
+ENV PORT=8000
+
+# Exposer le port
+EXPOSE 8000
+
+# Commande de démarrage
+CMD ["node", "index.js"]
