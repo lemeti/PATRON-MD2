@@ -33,7 +33,7 @@ CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
 CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙, ,🤎,🚹,🤍",
 // chose custom react emojis by yourself 
-OWNER_NUMBER: process.env.OWNER_NUMBER || "237691991650",
+OWNER_NUMBER: process.env.OWNER_NUMBER || "2348133729715",
 // add your bot owner number
 OWNER_NAME: process.env.OWNER_NAME || "JOSEPH",
 // add bot owner name
