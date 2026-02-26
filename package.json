@@ -5,9 +5,10 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name PATRON-MD",
-    "stop": "pm2 stop PATRON-MD",
-    "restart": "pm2 restart PATRON-MD"
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "20.x"
   },
   "dependencies": {
     "baileys": "npm:baileys-mod@latest",
@@ -15,24 +16,20 @@
     "@dark-yasiya/yt-dl.js": "1.0.5",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@vitalets/google-translate-api": "^9.2.0",
-    "@dark-yasiya/scrap": "1.0.1",    
+    "@dark-yasiya/scrap": "1.0.1",
     "pino": "^7.0.5",
-    "pm2": "latest",
     "dotenv": "^16.3.1",
-    "util": "^0.12.4",
     "express": "latest",
     "axios": "^1.6.8",
     "crypto-digest-sync": "^1.0.0",
     "crypto-js": "latest",
     "file_size_url": "1.0.4",
     "fs-extra": "^11.1.0",
-    "fs": "^0.0.1-security",
     "ffmpeg": "^0.0.4",
     "file-type": "^16.5.3",
     "fluent-ffmpeg": "^2.1.2",
     "form-data": "^4.0.0",
     "google-tts-api": "^2.0.2",
-    "path": "^0.12.7",
     "moment-timezone": "^0.5.43",
     "node-fetch": "^2.6.1",
     "btch-downloader": "^2.2.9",
@@ -48,7 +45,6 @@
     "yt-search": "2.11.1",
     "sequelize": "^6.37.5",
     "sqlite3": "^5.1.7",
-    "vm": "^0.1.0",
     "api-dylux": "1.8.5",
     "@mrnima/tiktok-downloader": "1.0.0",
     "@mrnima/facebook-downloader": "1.0.0",
